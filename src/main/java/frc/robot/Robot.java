@@ -6,32 +6,26 @@ public class Robot extends TimedRobot {
 
   //Runs once when the robot starts up.
   @Override
-  public void robotInit() {
-  }
+  public void robotInit() { }
 
   //Runs every tick when the robot is on. It does not matter which mode the robot is in (autonomous, teleoperated, etc.)
   @Override
-  public void robotPeriodic() {
-  }
+  public void robotPeriodic() { }
 
   //Runs once when autonomous starts.
   @Override
-  public void autonomousInit() {
-  }
+  public void autonomousInit() { }
 
   //Runs every tick during autonomous.
   @Override
-  public void autonomousPeriodic() {
-  }
+  public void autonomousPeriodic() { }
 
   //Runs once when teleoperated starts.
   @Override
-  public void teleopInit(){
-  }
+  public void teleopInit(){ }
 
   //Runs every tick during teleoperated.
   @Override
-  public void teleopPeriodic() {
-  }
+  public void teleopPeriodic() { }
 
 }
