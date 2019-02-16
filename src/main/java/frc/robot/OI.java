@@ -2,20 +2,19 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 
-// THe OI class links together physical controls with commands on the robot.
+// The OI class links together physical controls with commands on the robot.
 
 public class OI {
 
-    //This is a singleton. Learn more about singletons here: https://www.geeksforgeeks.org/singleton-class-java/
+    // This is a singleton. Learn more about singletons here: https://www.geeksforgeeks.org/singleton-class-java/
     private static OI instance;
-
     public static OI getInstance() {
         if (instance == null)
             instance = new OI();
         return instance;
     }
 
-    //Initializing two Joysticks
+    // Initializing two Joysticks and giving them ports.
     private Joystick leftJoy, rightJoy;
 
     private OI() {

@@ -2,7 +2,7 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import frc.team4159.robot.commands.Drive;
+import frc.robot.commands.Drive;
 
 //This class is a Subsystem that drives the robot.
 
@@ -10,7 +10,6 @@ public class Drivetrain extends Subsystem {
 
     //This is a singleton. Learn more about singletons here: https://www.geeksforgeeks.org/singleton-class-java/
     private static Drivetrain instance;
-
     public static Drivetrain getInstance(){
         if(instance == null)
             instance = new Drivetrain();
@@ -42,4 +41,5 @@ public class Drivetrain extends Subsystem {
         setDefaultCommand(new Drive());
 
     }
+
 }

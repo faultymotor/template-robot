@@ -1,31 +1,52 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.command.Scheduler;
+import frc.robot.subsystems.Drivetrain;
 
 public class Robot extends TimedRobot {
 
-  //Runs once when the robot starts up.
-  @Override
-  public void robotInit() { }
+    private OI oi;
+    private Drivetrain drivetrain;
 
-  //Runs every tick when the robot is on. It does not matter which mode the robot is in (autonomous, teleoperated, etc.)
-  @Override
-  public void robotPeriodic() { }
+    // Runs once when the robot starts up.
+    @Override
+    public void robotInit() {
 
-  //Runs once when autonomous starts.
-  @Override
-  public void autonomousInit() { }
+        oi = OI.getInstance();
+        drivetrain = Drivetrain.getInstance();
 
-  //Runs every tick during autonomous.
-  @Override
-  public void autonomousPeriodic() { }
+    }
 
-  //Runs once when teleoperated starts.
-  @Override
-  public void teleopInit(){ }
+    // Runs every tick when the robot is on. It does not matter which mode the robot is in (autonomous, teleoperated, etc.)
+    @Override
+    public void robotPeriodic() {
+    }
 
-  //Runs every tick during teleoperated.
-  @Override
-  public void teleopPeriodic() { }
+    // Runs once when autonomous starts.
+    @Override
+    public void autonomousInit() {
+    }
+
+    // Runs every tick during autonomous.
+    @Override
+    public void autonomousPeriodic() {
+
+        Scheduler.getInstance().run();
+
+    }
+
+    // Runs once when teleoperated starts.
+    @Override
+    public void teleopInit(){
+    }
+
+    // Runs every tick during teleoperated.
+    @Override
+    public void teleopPeriodic() {
+
+        Scheduler.getInstance().run();
+
+    }
 
 }
